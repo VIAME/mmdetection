@@ -14,7 +14,7 @@ def _allreduce_coalesced(tensors, world_size, bucket_size_mb=-1):
     else:
         buckets = OrderedDict()
         for tensor in tensors:
-            tp = tensor.type()
+            tp = tensor.scalar_type()
             if tp not in buckets:
                 buckets[tp] = []
             buckets[tp].append(tensor)
