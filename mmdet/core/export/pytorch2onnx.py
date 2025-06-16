@@ -5,10 +5,10 @@ import numpy as np
 import torch
 from mmcv.runner import load_checkpoint
 
-try:
-    from mmcv.onnx.symbolic import register_extra_symbolics
-except ModuleNotFoundError:
-    raise NotImplementedError('please update mmcv to version>=v1.0.4')
+#try:
+#    from mmcv.onnx.symbolic import register_extra_symbolics
+#except ModuleNotFoundError:
+#    raise NotImplementedError('please update mmcv to version>=v1.0.4')
 
 
 def generate_inputs_and_wrap_model(config_path, checkpoint_path, input_config):
